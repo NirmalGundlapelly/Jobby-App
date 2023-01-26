@@ -23,41 +23,53 @@ const Header = props => {
           />
         </Link>
 
-        <div className="mobile-nav-container">
-          <Link to="/">
-            <button className="mobile-buttons" type="button">
-              <AiFillHome className="mobile-icons" />
+        <ul className="mobile-nav-container">
+          <li className="nav-item">
+            <Link to="/">
+              <button className="mobile-buttons" type="button">
+                <AiFillHome className="mobile-icons" />
+              </button>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/jobs">
+              <button className="mobile-buttons" type="button">
+                <BsFillBriefcaseFill className="mobile-icons" />
+              </button>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <button
+              onClick={onClickLogout}
+              className="mobile-buttons"
+              type="button"
+            >
+              <FiLogOut className="mobile-icons" />
             </button>
-          </Link>
-          <Link to="/jobs">
-            <button className="mobile-buttons" type="button">
-              <BsFillBriefcaseFill className="mobile-icons" />
-            </button>
-          </Link>
-          <button
-            onClick={onClickLogout}
-            className="mobile-buttons"
-            type="button"
-          >
-            <FiLogOut className="mobile-icons" />
-          </button>
-        </div>
+          </li>
+        </ul>
 
-        <div className="large-nav-container">
-          <Link className="large-link" to="/">
-            <p className="large-buttons">Home</p>
-          </Link>
-          <Link className="large-link" to="/jobs">
-            <p className="large-buttons">Jobs</p>
-          </Link>
-          <button
-            onClick={onClickLogout}
-            className="large-logout-button"
-            type="button"
-          >
-            Logout
-          </button>
-        </div>
+        <ul className="large-nav-container">
+          <li className="nav-item">
+            <Link className="large-link" to="/">
+              <p className="large-buttons">Home</p>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="large-link" to="/jobs">
+              <p className="large-buttons">Jobs</p>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <button
+              onClick={onClickLogout}
+              className="large-logout-button"
+              type="button"
+            >
+              Logout
+            </button>
+          </li>
+        </ul>
       </nav>
     </div>
   )

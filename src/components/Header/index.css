@@ -3,8 +3,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 .header-logo {
   width: 100px;
@@ -27,6 +25,7 @@
 @media screen and (min-width: 768px) {
   .mobile-nav-container {
     display: none;
+    list-style-type: none;
   }
   .nav-container {
     padding-left: 30px;
@@ -38,10 +37,15 @@
     align-items: center;
   }
 }
-
+.nav-item {
+  list-style: none;
+}
 @media screen and (max-width: 767px) {
   .large-nav-container {
     display: none;
+  }
+  .mobile-nav-container {
+    display: flex;
   }
 }
 
